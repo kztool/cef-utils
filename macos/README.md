@@ -2,7 +2,7 @@
 
 #### 标准库 
 ```bash
-$ curl -s https://raw.githubusercontent.com/kztool/cef-utils/master/libcef/osx/libcef-3578.sh | bash
+$ curl -s https://raw.githubusercontent.com/kztool/cef-utils/master/macos/libcef-3578.sh | bash
 ```
 #### 示例 
 ```bash
