@@ -7,5 +7,5 @@ $ curl -s https://raw.githubusercontent.com/kztool/cef-utils/master/libcef/osx/l
 ```
 #### 示例 Macos 
 ```bash
-$ curl -s https://raw.githubusercontent.com/kztool/cef-utils/master/libcef/osx/build-3578.sh | bash
+$ curl -s https://raw.githubusercontent.com/kztool/cef-utils/master/libcef/osx/cefdemo-3578 | bash
 ```
