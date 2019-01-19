@@ -169,6 +169,7 @@ int main(int argc, char* argv[]) {
 在主项目中，Build Phase 中加入以下脚本
 ```bash
 Contents="${BUILT_PRODUCTS_DIR}/${TARGET_NAME}.app/Contents"
+rm -rf "${Contents}/Frameworks"
 mkdir -p "${Contents}/Frameworks"
 cp -r "${SRCROOT}/libcef/${CONFIGURATION}/Chromium Embedded Framework.framework" "${Contents}/Frameworks/"
 cp -r "${SRCROOT}/Carthage/Build/Mac/CocoaLumberjack.framework" "${Contents}/Frameworks/"
