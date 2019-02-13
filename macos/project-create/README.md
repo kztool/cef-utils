@@ -147,11 +147,11 @@ int main(int argc, char* argv[]) {
 ## 配置项目
 
 #### Header Search Path
-配置为 $(SRCROOT)/libcef <br>
+配置为 $(SRCROOT)/libs/cef <br>
 ![header-search-path](./images/header-search-path.png)
 
 #### Other Linker Flags
-配置 -framework Cocoa $(SRCROOT)/libcef/$(CONFIGURATION)/libcef_dll_wrapper.a $(SRCROOT)/libcef/$(CONFIGURATION)/cef_sandbox.a <br>
+配置 -framework Cocoa $(SRCROOT)/libs/cef/$(CONFIGURATION)/libcef_dll_wrapper.a $(SRCROOT)/libs/cef/$(CONFIGURATION)/cef_sandbox.a <br>
 ![other-linker-flags](./images/other-linker-flags.png)
 
 #### Other Warning Flags
