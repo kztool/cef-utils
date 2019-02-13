@@ -166,7 +166,7 @@ int main(int argc, char* argv[]) {
 ![sign-remove](./images/sign-remove.png)
 
 ## 打包 framework 和 Helper 程序
-在主项目中，Build Phase 中加入以下脚本
+在主项目中，Build Phase 中加入安装脚本，并移动到最前面
 ```bash
 LIBPATH=${SRCROOT}"/libs"
 CEFPATH=${LIBPATH}"/cef"
@@ -225,7 +225,10 @@ if [ ! -d ${LIBPATH}"/Carthage" ]; then
     cd ${LIBPATH}
     carthage update
 fi
+```
 
+在主项目中，Build Phase 中加入拷贝库脚本，并移动到最后面
+```bash
 # copy libs
 Contents="${BUILT_PRODUCTS_DIR}/${TARGET_NAME}.app/Contents"
 rm -rf "${Contents}/Frameworks"
