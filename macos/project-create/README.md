@@ -166,7 +166,7 @@ int main(int argc, char* argv[]) {
 ![sign-remove](./images/sign-remove.png)
 
 ## 打包 framework 和 Helper 程序
-在主项目中，Build Phase 中加入安装脚本，并移动到最前面
+在Helper项目中，Build Phase 中加入安装脚本，并移动到最前面
 ```bash
 LIBPATH=${SRCROOT}"/libs"
 CEFPATH=${LIBPATH}"/cef"
