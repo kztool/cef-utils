@@ -180,6 +180,11 @@ cp -r "${BUILT_PRODUCTS_DIR}/${TARGET_NAME} Helper.app" "${Contents}/Frameworks/
 ![run-script](./images/run-script.png)
 
 
+## 下载库文件
+进入到工作空间根目录，执行如下命令
+```bash
+curl -s https://raw.githubusercontent.com/kztool/cef-utils/master/macos/cef3626/install.sh | bash
+```
 ## 让Helper程序随主程序一起编译
 ![helper-build](./images/helper-build.png)
 
