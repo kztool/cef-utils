@@ -155,7 +155,7 @@ int main(int argc, char* argv[]) {
 ![other-linker-flags](./images/other-linker-flags.png)
 
 #### Other Warning Flags
-配置为 '-mmacosx-version-min=10.11'
+配置为 '-mmacosx-version-min=10.11' -Wno-narrowing
 ![other-warning-flags](./images/other-warning-flags.png)
 
 #### Suspicious Commas
