@@ -11,10 +11,6 @@ if ! [ -x "$(command -v cmake)" ]; then
     brew install cmake
 fi
 
-if ! [ -x "$(command -v carthage)" ]; then
-    brew install carthage
-fi
-
 if [ ! -d ${LIBPATH} ]; then
     mkdir -p ${LIBPATH}
 fi
@@ -45,15 +41,4 @@ done
     # clean up
     cd ../../
     rm -rf cef_binary.tar.bz2
-fi
-
-# install SVGKit
-if [ ! -d ${LIBPATH}"/Carthage" ]; then
-    rm -rf ${LIBPATH}/"Cartfile"
-    rm -rf ${LIBPATH}/"Cartfile.resolved"
-
-    echo "github \"SVGKit/SVGKit\" \"3.x\"" > ${LIBPATH}/"Cartfile"
-
-    cd ${LIBPATH}
-    carthage update
 fi
