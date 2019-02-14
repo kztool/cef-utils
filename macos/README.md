@@ -5,5 +5,5 @@
 ## 生成库文件
 #### CEF 3626 Chrome 72
 ```bash
-$ curl -s https://github.com/kztool/cef-utils/blob/master/macos/cef3626/install.sh | bash
+$ curl -s https://raw.githubusercontent.com/kztool/cef-utils/master/macos/cef3626/install.sh | bash
 ```
