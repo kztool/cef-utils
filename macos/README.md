@@ -3,7 +3,7 @@
 
 ## 生成库文件
 
-#### CEF 3626 Chrome 71
+#### CEF 3578 Chrome 71
 ```bash
 $ curl -s https://raw.githubusercontent.com/kztool/cef-utils/master/macos/cef3578/install.sh | bash
 ```
