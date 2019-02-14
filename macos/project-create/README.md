@@ -166,67 +166,6 @@ int main(int argc, char* argv[]) {
 ![sign-remove](./images/sign-remove.png)
 
 ## 打包 framework 和 Helper 程序
-在Helper项目中，Build Phase 中加入安装脚本，并移动到最前面
-```bash
-LIBPATH=${SRCROOT}"/libs"
-CEFPATH=${LIBPATH}"/cef"
-
-if ! [ -x "$(command -v brew)" ]; then
-    echo 'Error: brew is not installed.' >&2
-    exit 1
-fi
-
-if ! [ -x "$(command -v cmake)" ]; then
-    brew install cmake
-fi
-
-if ! [ -x "$(command -v carthage)" ]; then
-    brew install carthage
-fi
-
-if [ ! -d ${LIBPATH} ]; then
-    mkdir -p ${LIBPATH}
-fi
-
-# install libcef
-if [ ! -d ${CEFPATH} ]; then
-    mkdir -p ${CEFPATH}
-    cd ${CEFPATH}
-
-    # download
-    curl http://opensource.spotify.com/cefbuilds/cef_binary_3.3626.1886.g162fdec_macosx64.tar.bz2 -o cef_binary.tar.bz2
-    tar -xf cef_binary.tar.bz2
-
-    # build
-    cd cef_binary_**_macosx64
-    mkdir build
-    cd build
-    cmake -G "Xcode" ..
-    for CONFIG in Debug Release
-        do
-        xcodebuild -target ALL_BUILD -configuration ${CONFIG} build
-        cp -r ../${CONFIG} ../../
-        cp ./libcef_dll_wrapper/${CONFIG}/libcef_dll_wrapper.a ../../${CONFIG}/
-        done
-    cp -r ../include ../../
-
-    # clean up
-    cd ../../
-    rm -rf cef_binary.tar.bz2
-fi
-
-# install SVGKit
-if [ ! -d ${LIBPATH}"/Carthage" ]; then
-    rm -rf ${LIBPATH}/"Cartfile"
-    rm -rf ${LIBPATH}/"Cartfile.resolved"
-
-    echo "github \"SVGKit/SVGKit\" \"3.x\"" > ${LIBPATH}/"Cartfile"
-
-    cd ${LIBPATH}
-    carthage update
-fi
-```
-
 在主项目中，Build Phase 中加入拷贝库脚本，并移动到最后面
 ```bash
 # copy libs
