@@ -48,12 +48,12 @@ done
 fi
 
 # install SVGKit
-if [ ! -d ${LIBPATH}"/Carthage" ]; then
-    rm -rf ${LIBPATH}/"Cartfile"
-    rm -rf ${LIBPATH}/"Cartfile.resolved"
+# if [ ! -d ${LIBPATH}"/Carthage" ]; then
+#     rm -rf ${LIBPATH}/"Cartfile"
+#     rm -rf ${LIBPATH}/"Cartfile.resolved"
 
-    echo "github \"SVGKit/SVGKit\" \"3.x\"" > ${LIBPATH}/"Cartfile"
+#     echo "github \"SVGKit/SVGKit\" \"3.x\"" > ${LIBPATH}/"Cartfile"
 
-    cd ${LIBPATH}
-    carthage update
-fi
+#     cd ${LIBPATH}
+#     carthage update
+# fi
