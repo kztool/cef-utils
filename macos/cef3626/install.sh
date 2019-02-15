@@ -11,10 +11,6 @@ if ! [ -x "$(command -v cmake)" ]; then
     brew install cmake
 fi
 
-if ! [ -x "$(command -v carthage)" ]; then
-    brew install carthage
-fi
-
 if [ ! -d ${LIBPATH} ]; then
     mkdir -p ${LIBPATH}
 fi
@@ -47,7 +43,10 @@ done
     rm -rf cef_binary.tar.bz2
 fi
 
-# install SVGKit
+# if ! [ -x "$(command -v carthage)" ]; then
+#     brew install carthage
+# fi
+# # install SVGKit
 # if [ ! -d ${LIBPATH}"/Carthage" ]; then
 #     rm -rf ${LIBPATH}/"Cartfile"
 #     rm -rf ${LIBPATH}/"Cartfile.resolved"
