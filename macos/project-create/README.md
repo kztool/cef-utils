@@ -164,10 +164,6 @@ Release配置为 -DNDEBUG '-mmacosx-version-min=10.11' -Wno-narrowing
 配置为No
 ![suspicious-commas](./images/suspicious-commas.png)
 
-#### Suspicious Commas
-配置为No
-![suspicious-commas](./images/suspicious-commas.png)
-
 #### Automatic Reference Counting
 配置为No
 ![sign-remove](./images/close-arc.png)
