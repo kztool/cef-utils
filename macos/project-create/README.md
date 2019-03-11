@@ -166,7 +166,12 @@ Release配置为 -DNDEBUG '-mmacosx-version-min=10.11' -Wno-narrowing
 
 #### Automatic Reference Counting
 配置为No
-![sign-remove](./images/close-arc.png)
+![close-arc](./images/close-arc.png)
+
+
+#### 取消签名	#### Suspicious Commas
+![sign-remove](./images/sign-remove.png)	配置为No
+
 
 ## 打包 framework 和 Helper 程序
 在主项目中，Build Phase 中加入拷贝库脚本，并移动到最后面
