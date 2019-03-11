@@ -20,8 +20,8 @@ if [ ! -d ${CEFPATH} ]; then
     mkdir -p ${CEFPATH}
     cd ${CEFPATH}
 
-    # download
-    curl http://opensource.spotify.com/cefbuilds/cef_binary_3.3626.1891.g52be333_macosx64.tar.bz2 -o cef_binary.tar.bz2
+    # download 
+    curl http://opensource.spotify.com/cefbuilds/cef_binary_3.3626.1895.g7001d56_macosx64.tar.bz2 -o cef_binary.tar.bz2
     tar -xf cef_binary.tar.bz2
 
     # build
@@ -42,17 +42,3 @@ done
     cd ../../
     rm -rf cef_binary.tar.bz2
 fi
-
-# if ! [ -x "$(command -v carthage)" ]; then
-#     brew install carthage
-# fi
-# # install SVGKit
-# if [ ! -d ${LIBPATH}"/Carthage" ]; then
-#     rm -rf ${LIBPATH}/"Cartfile"
-#     rm -rf ${LIBPATH}/"Cartfile.resolved"
-
-#     echo "github \"SVGKit/SVGKit\" \"3.x\"" > ${LIBPATH}/"Cartfile"
-
-#     cd ${LIBPATH}
-#     carthage update
-# fi
