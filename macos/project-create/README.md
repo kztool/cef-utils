@@ -179,8 +179,6 @@ Contents="${BUILT_PRODUCTS_DIR}/${TARGET_NAME}.app/Contents"
 rm -rf "${Contents}/Frameworks"
 mkdir -p "${Contents}/Frameworks"
 cp -r "${SRCROOT}/libs/cef/${CONFIGURATION}/Chromium Embedded Framework.framework" "${Contents}/Frameworks/"
-cp -r "${SRCROOT}/libs/Carthage/Build/Mac/CocoaLumberjack.framework" "${Contents}/Frameworks/"
-cp -r "${SRCROOT}/libs/Carthage/Build/Mac/SVGKit.framework" "${Contents}/Frameworks/"
 cp -r "${BUILT_PRODUCTS_DIR}/${TARGET_NAME} Helper.app" "${Contents}/Frameworks/"
 ```
 ![run-script](./images/run-script.png)
