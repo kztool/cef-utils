@@ -21,7 +21,7 @@ if [ ! -d ${CEFPATH} ]; then
     cd ${CEFPATH}
 
     # download       
-    curl http://opensource.spotify.com/cefbuilds/cef_binary_75.0.11%2Bgf50b3c2%2Bchromium-75.0.3770.100_macosx64.tar.bz2
+    curl http://opensource.spotify.com/cefbuilds/cef_binary_75.0.11%2Bgf50b3c2%2Bchromium-75.0.3770.100_macosx64.tar.bz2 -o cef_binary.tar.bz2
     tar -xf cef_binary.tar.bz2
 
     # build
