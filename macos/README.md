@@ -28,3 +28,8 @@ $ curl -s https://raw.githubusercontent.com/kztool/cef-utils/master/macos/cef372
 $ curl -s https://raw.githubusercontent.com/kztool/cef-utils/master/macos/cef3770/install.sh | bash
 ```
 
+#### CEF 3809 Chrome 76
+```bash
+$ curl -s https://raw.githubusercontent.com/kztool/cef-utils/master/macos/cef3809/install.sh | bash
+```
+
