@@ -174,11 +174,12 @@ Release配置为 -DNDEBUG '-mmacosx-version-min=10.11' -Wno-narrowing
 ## 打包 framework 和 Helper 程序
 在主项目中，Build Phase 中加入拷贝库脚本，并移动到最后面
 ```bash
-# copy libs
 Contents="${BUILT_PRODUCTS_DIR}/${TARGET_NAME}.app/Contents"
 mkdir -p "${Contents}/Frameworks"
 yes | cp -r "${SRCROOT}/libs/cef/${CONFIGURATION}/Chromium Embedded Framework.framework" "${Contents}/Frameworks/"
 yes | cp -r "${BUILT_PRODUCTS_DIR}/${TARGET_NAME} Helper.app" "${Contents}/Frameworks/"
+yes | cp -r "${BUILT_PRODUCTS_DIR}/${TARGET_NAME} Helper (GPU).app" "${Contents}/Frameworks/"
+yes | cp -r "${BUILT_PRODUCTS_DIR}/${TARGET_NAME} Helper (Renderer).app" "${Contents}/Frameworks/"
 ```
 ![run-script](./images/run-script.png)
 
